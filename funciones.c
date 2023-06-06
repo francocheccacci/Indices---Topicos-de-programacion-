@@ -89,6 +89,27 @@ int buscarAlumno( const char *path, t_indice * ind, int cant_registros, long dni
         printf("DNI no encontrado. \n");
     }
 
+    fclose(arch);
+
+    return 0;
+
+}
+
+/******************************************************************************/
+int agregarAlumno(const char *path,t_indice * ind,int cant_registros, t_alumno nuevoAlumno){
+
+    FILE *arch = fopen(path, "a");
+    if (!arch) {
+        printf("Error de lectura del archivo\n");
+        return -1;
+    }
+
+    fwrite(&nuevoAlumno,sizeof(t_alumno), 1, arch);
+
+
+
+    fclose(arch);
+
     return 0;
 }
 

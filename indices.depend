@@ -38,15 +38,15 @@
 
 1686008940 e:\progra1\ejercicio_indice\indices\tipos.h
 
-1686012164 source:e:\progra1\ejercicio_indice\indices\funciones.c
+1686014729 source:e:\progra1\ejercicio_indice\indices\funciones.c
 	<stdio.h>
 	"biblioteca.h"
 	"funciones.h"
 
-1686011796 e:\progra1\ejercicio_indice\indices\funciones.h
+1686014478 e:\progra1\ejercicio_indice\indices\funciones.h
 	"tipos.h"
 
-1686012921 source:e:\progra1\ejercicio_indice\indices\main.c
+1686014924 source:e:\progra1\ejercicio_indice\indices\main.c
 	<stdio.h>
 	<stdlib.h>
 	"biblioteca.h"

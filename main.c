@@ -48,14 +48,21 @@ int main()
 
             case 'A':
                 printf("Ingrese Apellido y Nombre:");
-                scanf("%s", &nuevoAlumno.apyn);
+                scanf("%s", nuevoAlumno.apyn);
                 printf("Ingrese DNI:");
                 scanf("%ld", &nuevoAlumno.dni);
-                printf("Ingrese año, mes, día: ");
-                scanf("%d %d %d", &nuevoAlumno.fecha_nac.anio, &nuevoAlumno.fecha_nac.mes, &nuevoAlumno.fecha_nac.dia);
+                printf("Ingrese año: ");
+                scanf("%d", &nuevoAlumno.fecha_nac.anio);
+                printf("Ingrese mes: ");
+                scanf("%d", &nuevoAlumno.fecha_nac.mes);
+                printf("Ingrese dia: ");
+                scanf("%d", &nuevoAlumno.fecha_nac.dia);
 
-
-
+                agregarAlumno(ARCH_ALUMNOS, indice,cant_registros,nuevoAlumno);
+                cant_registros++;
+                t_indice *nuevoIndice = generar_indice(ARCH_ALUMNOS, cant_registros, compara_alumnos_idx);
+                free(indice);
+                indice = nuevoIndice;
                 system("PAUSE");
                 break;
 
