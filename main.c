@@ -59,10 +59,11 @@ int main()
                 scanf("%d", &nuevoAlumno.fecha_nac.dia);
 
                 agregarAlumno(ARCH_ALUMNOS, indice,cant_registros,nuevoAlumno);
-                cant_registros++;
-                t_indice *nuevoIndice = generar_indice(ARCH_ALUMNOS, cant_registros, compara_alumnos_idx);
-                free(indice);
+                cant_registros++; // como agrego un alumno tengo que sumarle uno a la cantidad
+                t_indice *nuevoIndice = generar_indice(ARCH_ALUMNOS, cant_registros, compara_alumnos_idx); // creo un nuevo indice para los alumnos viejos mas el nuevo
+                free(indice); //como ya hice la copia de todos los alumnos (incluido el nuevo) libero el indice, para luego agregarle el nuevoIndice
                 indice = nuevoIndice;
+
                 system("PAUSE");
                 break;
 
